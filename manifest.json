@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Amazon Variation Pricer",
+  "version": "1.0",
+  "description": "Show hidden prices on color/size tiles automatically.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.amazon.com/*/dp/*",
+        "https://*.amazon.com.au/*/dp/*",
+        "https://*.amazon.co.uk/*/dp/*",
+        "https://*.amazon.ca/*/dp/*",
+        "https://*.amazon.de/*/dp/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
